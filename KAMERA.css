@@ -1,0 +1,86 @@
+/* Background popup */
+.popup-bg {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+    z-index: 9999;
+}
+
+/* Animasi fade */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Container popup */
+.popup-container {
+    width: 420px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+    backdrop-filter: blur(20px);
+    color: white;
+    text-align: center;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+/* Animasi container */
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Tombol close */
+.close-btn {
+    position: absolute;
+    top: 10px; right: 10px;
+    background: rgba(255, 50, 50, 0.7);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.close-btn:hover {
+    background: rgba(255, 0, 0, 0.9);
+}
+
+/* Judul */
+.popup-title {
+    margin-top: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Frame kamera */
+.camera-frame {
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: black;
+    border: 2px solid rgba(255,255,255,0.4);
+    margin-top: 15px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    margin-top: 12px;
+    font-size: 14px;
+    opacity: 0.9;
+}
