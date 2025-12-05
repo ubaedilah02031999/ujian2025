@@ -16,6 +16,7 @@ body {
         align-items: center;
         justify-content: center;
         animation: fadeIn 0.7s;
+        z-index: 9999;
     }
 
     /* Kotak popup */
@@ -26,6 +27,7 @@ body {
         text-align: center;
         width: 300px;
         animation: zoomIn 0.5s;
+        z-index: 1000;
     }
 
     /* Animasi muncul */
